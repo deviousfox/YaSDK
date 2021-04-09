@@ -1,3 +1,8 @@
+_____V0.21_____
+
+1. Reworked html rawarded module
+_______________
+
 _____V0.20_____
 1. Add sample scene and sample script
 2. Starting seve development via yandex sdk

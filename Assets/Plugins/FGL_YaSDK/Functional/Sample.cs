@@ -13,7 +13,7 @@ using System;
 
 public class Sample : MonoBehaviour, IYaAdsListener
 {
-    public string PlacemetID = "RewardAdsSample";
+    public int PlacemetID = 6775443;
 
     public Text SaveOutputText;
     public Text RewardAdsOutput;
@@ -46,7 +46,7 @@ public class Sample : MonoBehaviour, IYaAdsListener
         YaAds.ShowFullScreenAds();
     }
 
-    public void OnYaAdsDidFinish(string placementId, ShowResult showResult)
+    public void OnYaAdsDidFinish(int placementId, ShowResult showResult)
     {
         if (placementId == PlacemetID && showResult == ShowResult.success)// cheking placement id and ads result
         {

@@ -15,7 +15,7 @@ namespace FGL_YaSdk
     {
 
         [DllImport("__Internal")]
-        public static extern void ShowRewardedAds(string placement);
+        public static extern void ShowRewardedAds(int placementID);
 
 
         [DllImport("__Internal")]
@@ -34,7 +34,7 @@ namespace FGL_YaSdk.Ads
     public enum ShowResult { closed, success, exception }
     public interface IYaAdsListener
     {
-       void OnYaAdsDidFinish(string placementId, ShowResult showResult);
+       void OnYaAdsDidFinish(int placementId, ShowResult showResult);
     }
 
     public class YaAds
@@ -50,7 +50,7 @@ namespace FGL_YaSdk.Ads
             adsListeners.Add(listener);
         }
 
-        public static void ShowRewardAds(string placementId)
+        public static void ShowRewardAds(int placementId)
         {
             ExternToWebgl.ShowRewardedAds(placementId);
         }
@@ -61,7 +61,7 @@ namespace FGL_YaSdk.Ads
             ExternToWebgl.ShowFullscreenAds();
         }
 
-        public static void SendAdsCallback(string placementId, ShowResult showResult)
+        public static void SendAdsCallback(int placementId, ShowResult showResult)
         {
             foreach (var listener in adsListeners)
             {

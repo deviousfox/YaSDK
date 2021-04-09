@@ -198,7 +198,7 @@ namespace FGL_YaSDK.Editor
     {
         public static string[] tempaltes = new string [] { "<script src='https://yandex.ru/games/sdk/v2'></script>", 
             "<script>  function ShowFullscreen() { YaGames.init({ adv: { onAdvClose: (wasShown) => { console.info('adv closed!'); },},}).then((ysdk) => { ysdk.adv.showFullscreenAdv(); }); } </script>",
-        "<script> function ShowVideo(){ YaGames.init({ adv: { onAdvClose: wasShown => { console.info('adv closed!'); } } }) .then(ysdk => { ysdk.adv.showRewardedVideo(); ysdk.adv.showRewardedVideo({ callbacks: { onOpen: () => { console.log('Video ad open.'); }, onRewarded: () => { unityInstance.SendMessage('InternalFromJs','AdsSecsess'); console.log('Rewarded!'); }, onClose: () => { unityInstance.SendMessage('InternalFromJs','AdsCloset'); console.log('Video ad closed.'); }, onError: (e) => { unityInstance.SendMessage('InternalFromJs','AdsException'); console.log('Error while open video ad:', e); } } }); }); } </script>"
+        "<script> function ShowRewardAds(placementID){ YaGames.init({ adv: { onAdvClose: wasShown => { console.info('adv closed!'); } } }) .then(ysdk => { ysdk.adv.showRewardedVideo({ callbacks: { onOpen: () => { console.log('Video ad open.'); }, onRewarded: () => { unityInstance.SendMessage('InternalFromJs','AdsSecsess', placementID); console.log('Rewarded!'); }, onClose: () => { unityInstance.SendMessage('InternalFromJs','AdsCloset',placementID); console.log('Video ad closed.'); }, onError: (e) => { unityInstance.SendMessage('InternalFromJs','AdsException',placementID); console.log('Error while open video ad:', e); } } }); }); } </script>"
         };
     }
 }

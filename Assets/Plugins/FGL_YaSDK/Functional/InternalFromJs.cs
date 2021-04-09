@@ -14,15 +14,15 @@ namespace FGL_YaSdk
     public class InternalFromJs : MonoBehaviour
     {
 
-        public void AdsCloset(string placementId)
+        public void AdsCloset(int placementId)
         {
             YaAds.SendAdsCallback(placementId, ShowResult.closed);
         }
-        public void AdsException(string placementId)
+        public void AdsException(int placementId)
         {
             YaAds.SendAdsCallback(placementId, ShowResult.exception);
         }
-        public void AdsSecsess(string placementId)
+        public void AdsSecsess(int placementId)
         {
             YaAds.SendAdsCallback(placementId, ShowResult.success);
         }
