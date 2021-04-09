@@ -1,3 +1,8 @@
+_____V0.22_____
+
+1. Sample scene reworked
+_______________
+
 _____V0.21_____
 
 1. Reworked html rawarded module

@@ -965,7 +965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811d34ab579786e4fbd87c94f51caba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlacemetID: RewardAdsSample
+  PlacemetID: 0
   SaveOutputText: {fileID: 511753210}
   RewardAdsOutput: {fileID: 567467109}
   SaveInputText: {fileID: 810542896}
